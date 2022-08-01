@@ -30,14 +30,14 @@ function App() {
   window.localStorage.setItem("todos", JSON.stringify(todos))
   return (
 
-    <div className="App">
+    <div className="App mx-auto">
       <form onSubmit={handleInputValue}>
       <input ref={elInput} type="text" placeholder='Todo...' />
-      <button className='ms-1' type='submit'>Submit</button>
+      <button className='btn btn-success ms-1' type='submit'>Submit</button>
       <div>
-      <button className='mt-3'>All {all}</button>
-      <button className='ms-1'>Aomplated {complated}</button>
-      <button className='ms-1'>UnComplated {unComplated}</button>
+      <button className='btn btn-primary mt-3'>All {all}</button>
+      <button className='btn btn-secondary mt-3 ms-1'>Aomplated {complated}</button>
+      <button className='btn btn-dark mt-3 ms-1'>UnComplated {unComplated}</button>
       </div>
       </form>
       {todos.length > 0 && <List>
